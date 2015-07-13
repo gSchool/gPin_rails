@@ -11,7 +11,10 @@ class PinsController < ApplicationController
     @pin = Pin.new(pin_params)
     # if the pin saves successfully
     if @pin.save
+      flash[:success] = "Successfully Created!"
       redirect_to pins_path
+
+      # redirect_to pins_path, flash: {success: "Successfully Created!"}
     else
       # show me the new page again - WITH THE ERROR MESSAGES!
       render :new
@@ -30,7 +33,7 @@ class PinsController < ApplicationController
     @pin = Pin.find_by_id params[:id]
     @pin.update pin_params
     if @pin.save
-      redirect_to pin_path @pin
+      redirect_to pin_path(@pin), notice: "Updated"
     else
       render :edit
     end
@@ -39,7 +42,9 @@ class PinsController < ApplicationController
   def destroy
     @pin = Pin.find_by_id params[:id]
     @pin.destroy
-    redirect_to pins_path
+    # flash[:success] = "SUCCESSFULLY DELETED!"
+    # redirect_to pins_path, notice: "SUCCESSFULLY DELETED!"
+    redirect_to pins_path, alert: "Destroyed"
   end
 
   private
