@@ -1,0 +1,13 @@
+<h1>Welcome to gPin!</h1>
+<!-- <h2><a href="/pins/new">Add a new pin</a></h2> -->
+<h2><%= link_to "Add a new pin", new_pin_path%></h2>
+
+<% @pins.each do |pin| %>
+  <p>
+    <%= pin.name%>
+  </p>
+  <p>
+    <%= link_to "Delete this pin", pin_path(pin), method: :delete, data: {confirm: "Are you sure?"}%>
+  </p>
+  <%= link_to "Edit", edit_pin_path(pin) %>
+<% end %>
