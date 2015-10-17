@@ -13,6 +13,17 @@ class PinsController < ApplicationController
     redirect_to '/pins'
   end
 
+  def edit
+    @pin = Pin.find(params[:id])
+  end
+
+  def update
+    @pin = Pin.find(params[:id])
+
+    @pin.update(pin_params)
+    redirect_to '/pins'
+  end
+
   private
 
   def pin_params
