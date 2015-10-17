@@ -1,7 +1,7 @@
 class PinsController < ApplicationController
 
   def index
-    @pins = Pins.all
+    @pins = Pin.all
   end
 
 end
