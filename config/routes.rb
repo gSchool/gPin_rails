@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/pins/:id/edit', to: 'pins#edit'
   put '/pins/:id', to: 'pins#update'
   patch '/pins/:id', to: 'pins#update'
+  delete '/pins/:id', to: 'pins#destroy'
 
 end
