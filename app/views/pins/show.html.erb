@@ -1,0 +1,9 @@
+<h1>Pin #<%= @pin.id %></h1>
+<div id="pin-show">
+  <a href="<%= @pin.url %>">
+    <img src="<%= @pin.image %>" alt="Awesome pin">
+  </a>
+  <p><%= @pin.comment %></p>
+</div>
+<a href="/pins/<%= @pin.id %>/edit">Edit this pin</a>
+<a href="/">Back to all pins</a>

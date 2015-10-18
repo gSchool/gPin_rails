@@ -1,0 +1,13 @@
+// Example using 'Cerulean' bootswatch
+
+// Import cerulean variables
+@import "bootswatch/united/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/united/bootswatch";
+
+// Whatever application styles you have go last
+/*@import "base";*/

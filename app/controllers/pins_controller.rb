@@ -24,6 +24,10 @@ class PinsController < ApplicationController
     redirect_to '/pins'
   end
 
+  def show
+    @pin = Pin.find(params[:id])
+  end
+
   private
 
   def pin_params
