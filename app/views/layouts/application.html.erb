@@ -7,11 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-  <a href="/">Pinterest Light</a>
-  <a href="/pins/new">Add New Pin</a>
-</nav>
-<%= yield %>
-
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Pinterest Light</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/pins/new">Add pin</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <%= yield %> 
+  </div>-
 </body>
 </html>

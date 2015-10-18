@@ -1,12 +1,19 @@
 <h1>Here are all my pins!</h1>
 
 <% @pins.each do |pin| %>
-  <div class="pin">
-    <a href="<%= pin.url %>">
-      <img src="<%= pin.image %>" alt="Awesome pin">
-    </a>
-    <p><%= pin.comment %></p>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <a href="/pins/<%= pin.id %>">
+        <img src="<%= pin.image %>" alt="Awesome pin">
+      </a>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <p><%= pin.comment %></p>
+      </li>
+      <li class="list-group-item"> 
+        <a href="/pins/<%= pin.id %>/edit">Edit this pin</a>
+      </li>
+    </ul>
   </div>
-  <a href="/pins/<%= pin.id %>">Show this pin</a>
-  <a href="/pins/<%= pin.id %>/edit">Edit this pin</a>
 <% end %>
