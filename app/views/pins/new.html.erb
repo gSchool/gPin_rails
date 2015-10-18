@@ -2,10 +2,10 @@
 
 <%= form_for @pin do |f| %>
   <%= f.label "Pin URL" %>
-  <%= f.text_field :url %>
+  <%= f.text_field :url, class: 'form-control' %>
   <%= f.label "Pin Image URL" %>
-  <%= f.text_field :image %>
+  <%= f.text_field :image, class: 'form-control' %>
   <%= f.label "Comment" %>
-  <%= f.text_field :comment %>
-  <%= f.submit %>
+  <%= f.text_area :comment, class: 'form-control' %>
+  <%= f.submit class: 'btn btn-primary' %>
 <% end %>
