@@ -1,9 +1,16 @@
 <h1>Pin #<%= @pin.id %></h1>
-<div id="pin-show">
-  <a href="<%= @pin.url %>">
+
+<div class="row">
+  <div class="col-xs-6">
     <img src="<%= @pin.image %>" alt="Awesome pin">
-  </a>
-  <p><%= @pin.comment %></p>
+  </div>
+  <div class="col-xs-6">
+    <h2><%= @pin.comment %></h2>
+    <h4><a href="<%= @pin.url %>", target="_blank">Source</a></h4>
+    <p class="pull-right">
+      <a href="/pins/<%= @pin.id %>/edit" class="btn btn-info">Edit this pin</a>
+      <%= link_to 'Destroy', @pin,  method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>
 </div>
-<a href="/pins/<%= @pin.id %>/edit">Edit this pin</a>
-<a href="/">Back to all pins</a>
+
