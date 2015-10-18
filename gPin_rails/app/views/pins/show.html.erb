@@ -1,0 +1,4 @@
+<p><%= @pin.comment %></p>
+<img src="<%= @pin.url %>">
+<img src="<%= @pin.image %>">
+<%= link_to 'Delete', @pin, method: :delete, data: {confirm: 'Are you sure?'} %>
