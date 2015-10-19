@@ -6,7 +6,7 @@
   </div>
   <div class="col-xs-6">
     <h2><%= @pin.comment %></h2>
-    <h4><a href="<%= @pin.url %>", target="_blank">Source</a></h4>
+    <h4><%= link_to "Source", @pin.url, target: "_blank" %></h4>
     <p class="pull-right">
       <%= render partial: 'buttons', locals: {pin: @pin} %>
     </p>

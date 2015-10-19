@@ -1,2 +1,2 @@
-<a href="/pins/<%= pin.id %>/edit" class="btn btn-info">Edit this pin</a>
+<%= link_to 'Edit this pin', edit_pin_path(pin), class: "btn btn-info" %>
 <%= link_to 'Destroy', pin,  method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
