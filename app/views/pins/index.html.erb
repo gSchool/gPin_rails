@@ -12,8 +12,7 @@
         <p><%= pin.comment %></p>
       </li>
       <li class="list-group-item pull-right"> 
-        <a href="/pins/<%= pin.id %>/edit" class="btn btn-info">Edit this pin</a>
-        <%= link_to 'Destroy', pin,  method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+        <%= render partial: 'buttons', locals: {pin: pin} %>
       </li>
     </ul>
   </div>
