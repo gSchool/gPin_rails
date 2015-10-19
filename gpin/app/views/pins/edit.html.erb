@@ -1,0 +1,15 @@
+<h4>Edit Pin</h4>
+
+<h3><a href="<%= @pin.url %>"><%= @pin.url %></a> </h3>
+<img src="<%= @pin.image %>" height="120" width="200">
+
+<%= form_for @pin do |f| %>
+    <%= f.label "Url" %>
+    <%= f.text_field :url %><br />
+    <%= f.label "Comment" %>
+    <%= f.text_field :comment %><br />
+    <%= f.label "Image Url" %>
+    <%= f.text_field :image %><br />
+    <%= f.submit "Update" %>
+<% end %>
+
