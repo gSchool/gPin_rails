@@ -10,7 +10,7 @@ class PinsController < ApplicationController
 
   def create
     @pin = Pin.create(pin_params)
-    redirect_to '/pins'
+    redirect_to pins_path
   end
 
   def edit
@@ -21,7 +21,7 @@ class PinsController < ApplicationController
     @pin = Pin.find(params[:id])
 
     @pin.update(pin_params)
-    redirect_to '/pins'
+    redirect_to pins_path
   end
 
   def show
@@ -31,7 +31,7 @@ class PinsController < ApplicationController
   def destroy
     @pin = Pin.find(params[:id])
     @pin.destroy
-    redirect_to '/pins'
+    redirect_to pins_path
   end
 
   private
