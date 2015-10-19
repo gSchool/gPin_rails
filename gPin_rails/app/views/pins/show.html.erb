@@ -1,5 +1,6 @@
 <p><%= @pin.comment %></p>
 <img src="<%= @pin.url %>">
 <img src="<%= @pin.image %>">
-<a href="/pins/<%= @pin.id %>/edit">Edit</a>
+<!-- <a href="/pins/<%= @pin.id %>/edit">Edit</a> -->
+<%= link_to 'Edit', edit_pin_path(@pin)%>
 <%= link_to 'Delete', @pin, method: :delete, data: {confirm: 'Are you sure?'} %>

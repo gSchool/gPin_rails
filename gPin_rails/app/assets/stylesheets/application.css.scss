@@ -13,29 +13,42 @@
  *= require_tree .
  *= require_self
  */
- body{
-  background-color: #9CB0FF;
- }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 
-}
 
-a {
-    display: block;
-    width: 60px;
-}
+ // Example using bootswatch
+//
+// First import  variables
+@import "bootswatch/Amelia/variables";
 
-li {
-    display: inline;
-}
-li {
-    float: left;
-}
+// Then bootstrap itself
+@import "bootstrap";
 
-a {
-    display: block;
-    width: 60px;
-}
+// And finally bootswatch style itself
+@import "bootswatch/Amelia/bootswatch";
+
+// If you want to import your own styles just use 
+
+@import "style.scss" 
+//if you want to include your css you have to create a file in folder stylesheets and import it, take off //lines in that case
+
+// Here are the free themes you can use:
+
+// Amelia
+// Cerulean
+// Cosmo
+// Cyborg
+// Darkly
+// Flatly
+// Journal
+// Lumen
+// Paper
+// Readable
+// Sandstone
+// Simplex
+// Slate
+// Spacelab
+// Superhero
+// United
+// Yeti
+
+ 

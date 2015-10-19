@@ -9,8 +9,12 @@
 <body>
 <nav>
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/pins/new">New</a></li>
+  <li>
+    <%= link_to 'Home', root_path %>
+  </li>
+  <li>
+  <%= link_to 'New', new_pin_path %>
+   </li>
   </ul>
 </nav>
 <br>
