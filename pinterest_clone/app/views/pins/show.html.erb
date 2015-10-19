@@ -4,6 +4,6 @@
 
 <p>Taken from: <a href="<%= @pin.url%>"><%= @pin.url %></a></p>
 <p><%= @pin.comment %></p>
-<a class="btn btn-info" href="/pins/<%= @pin.%>/edit">Edit</a>
+<a class="btn btn-info" href="/pins/<%= @pin.id %>/edit">Edit</a>
 <!-- <a href="/"></a> -->
 <%= link_to 'Delete', @pin, method: :delete, data: {confirm: 'Are you sure?'}%>
