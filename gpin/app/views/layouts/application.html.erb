@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gpin</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-2">
+        <form action="/" method="get">   
+          <button type="submit" class="btn btn-primary form-control">
+            <span class="glyphicon glyphicon-plus"></span> Home
+          </button>
+        </form>
+      </div>
+      <div class="col-md-2">
+        <form action="/pins/new" method="get">   
+          <button type="submit" class="btn btn-success form-control">
+            <span class="glyphicon glyphicon-plus"></span> New Pin
+          </button>
+        </form>
+      </div>
+      <div class="col-md-7">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-10">
+        <%= yield %>
+      </div>
+      <div class="col-md-1">
+
+      </div>
+        
+    </div>
+  </div>
+</body>
+</html>
