@@ -1,0 +1,6 @@
+<h1>INDEX PAGE!</h1>
+
+<% @pins.each do |pin| %>
+  <%= pin.url %>: <br/>
+  <img src="<%=pin.image%>" width="50">
+<% end %>
