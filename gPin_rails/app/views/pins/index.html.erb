@@ -1,0 +1,26 @@
+
+<br>
+<h4>Pins</h4>
+
+<% flash.each do |key, value| %>
+  <% if key == "create" %>
+    <%= content_tag :div, value, class: "text-center alert alert-success" %>
+  <% elsif key == "destroy" %>
+    <%= content_tag :div, value, class: "text-center alert alert-danger" %>
+  <% elsif key == "update" %>
+    <%= content_tag :div, value, class: "text-center alert alert-info" %>
+  <% end %>
+<% end %>
+
+<% @pins.each do |pin|  %>
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="<%= pin.url %>"><br />
+      <img src="<%= pin.image %>"><br />
+      <%= pin.comment %><br />
+      <%= link_to 'Show', pin_path(pin)  %>
+    <!-- i need to pass pin variable do one i have on line 5 -->
+    </div>
+  </div>
+<% end %>
+

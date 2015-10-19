@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GPinRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+  <ul>
+  <li>
+    <%= link_to 'Home', root_path %>
+  </li>
+  <li>
+  <%= link_to 'New', new_pin_path %>
+   </li>
+  </ul>
+</nav>
+<br>
+<%= yield %>
+
+</body>
+</html>
