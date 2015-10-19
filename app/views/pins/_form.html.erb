@@ -1,6 +1,6 @@
-<% if flash.alert %>
+<% if @pin.errors.any? %>
   <ul class="alert alert-danger">
-    <% flash.alert.each do |msg| %>
+    <% @pin.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
   </ul>

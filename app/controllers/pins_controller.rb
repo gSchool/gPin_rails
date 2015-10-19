@@ -13,7 +13,8 @@ class PinsController < ApplicationController
     if @pin.save
       redirect_to pins_path, notice: "Pin successfully created!"
     else
-      redirect_to new_pin_path, alert: @pin.errors.full_messages
+      render :new
+      # redirect_to new_pin_path, alert: @pin.errors.full_messages
     end
   end
 
