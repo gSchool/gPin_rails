@@ -1,7 +1,10 @@
+
+<br>
 <h4>Pins</h4>
 
 <% @pins.each do |pin|  %>
   <img src="<%= pin.url %>"><br />
   <img src="<%= pin.image %>"><br />
   <%= pin.comment %><br />
+  <a href="/pins/<%= pin.id%>">Show</a>
 <% end %>
