@@ -1,3 +1,10 @@
+<% if flash.alert %>
+  <ul class="alert alert-danger">
+    <% flash.alert.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
 <%= form_for @pin do |f| %>
   <%= f.label "Pin URL" %>
   <%= f.text_field :url, class: 'form-control' %>

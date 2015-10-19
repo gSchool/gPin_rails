@@ -1,5 +1,7 @@
 <h1>Here are all my pins!</h1>
-
+<% if flash.notice %>
+  <p class="alert alert-success"><%= flash.notice %></p>
+<% end %>
 <% @pins.each do |pin| %>
   <div class="panel panel-default">
     <div class="panel-body">

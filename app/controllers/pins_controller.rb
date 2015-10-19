@@ -10,7 +10,11 @@ class PinsController < ApplicationController
 
   def create
     @pin = Pin.create(pin_params)
-    redirect_to pins_path
+    if @pin.errors.any? 
+      redirect_to new_pin_path, alert: @pin.errors.full_messages
+    else
+      redirect_to pins_path, notice: "Pin successfully created!"
+    end
   end
 
   def edit
@@ -19,9 +23,12 @@ class PinsController < ApplicationController
 
   def update
     @pin = Pin.find(params[:id])
-
     @pin.update(pin_params)
-    redirect_to pins_path
+    if @pin.errors.any? 
+      redirect_to edit_pin_path, alert: @pin.errors.full_messages
+    else
+      redirect_to pins_path, notice: "Pin successfully updated!"
+    end
   end
 
   def show
@@ -31,7 +38,7 @@ class PinsController < ApplicationController
   def destroy
     @pin = Pin.find(params[:id])
     @pin.destroy
-    redirect_to pins_path
+    redirect_to pins_path, notice: "Pin successfully destroyed."
   end
 
   private
