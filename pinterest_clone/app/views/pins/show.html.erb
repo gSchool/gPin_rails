@@ -1,9 +1,14 @@
-<h1>Pin <%= @pin.name %></h1>
-
+  <div class="container-fluid">  
+  <div class="page-header">
+    <h1><%= @pin.name %></h1>
+  </div>
+  </div>
+<div class="container">
 <img src="<%= @pin.image %>" alt="img">
 
 <p>Taken from: <a href="<%= @pin.url%>"><%= @pin.url %></a></p>
 <p><%= @pin.comment %></p>
 <a class="btn btn-info" href="/pins/<%= @pin.id %>/edit">Edit</a>
 <!-- <a href="/"></a> -->
-<%= link_to 'Delete', @pin, method: :delete, data: {confirm: 'Are you sure?'}%>
+<%= link_to 'Delete', @pin, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+</div>

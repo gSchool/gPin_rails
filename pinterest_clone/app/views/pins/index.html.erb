@@ -1,4 +1,29 @@
-<h1>Pins</h1>
+<div class="container-fluid">
+  <div class="page-header">
+    <h1>Pins</h1>
+  </div>
+  
+</div>
+
+<div id="wrapper">
+  <div id="columns">
+    <% @pins.each do |pin|%>
+    <div class="pin">
+      <% if pin.image.length > 0 %>
+          <a href="<%=pin.url%>">
+            <img src="<%= pin.image%>" >
+          </a>
+        <%else%>
+        <a href="<%=pin.url%>">
+          <img src="http://a5.mzstatic.com/us/r30/Purple3/v4/9d/94/ee/9d94eee0-9d4c-05dd-e7a4-2ca851753695/icon175x175.png">
+        </a>
+        <%end%>
+        <p><%= pin.name %></p>
+        <a href="/pins/<%= pin.id %>" class="btn btn-primary btn-sm">View Pin</a>
+    </div>
+    <% end %>
+
+<!--
 <% @pins.each do |pin|%>
   <div>
     <% if pin.image.length > 0 %>
@@ -14,3 +39,4 @@
     <a href="/pins/<%= pin.id %>">View Pin</a>
     </div>
 <% end %>
+-->
