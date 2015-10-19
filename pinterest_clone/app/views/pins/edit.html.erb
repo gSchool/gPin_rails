@@ -1,17 +1,15 @@
-<h1>Edit Pin: <%= @pin.name %></h1>
+<div class="page-header">
+  <h1>Edit Pin: <em><%= @pin.name %></em></h1>
+</div>
 
 <div class="jumbotron">
   <div class="container">
-    <%= form_for @pin do |f|%>
-      <%= f.label 'Website Url'%>
-      <%= f.text_field :url %><br />
-      <%= f.label 'Name'%>
+    <%= bootstrap_form_for @pin do |f|%>
+      <%= f.text_field :url, label: 'Website Url' %><br />
       <%= f.text_field :name %><br />
-      <%= f.label 'Image Url'%>
-      <%= f.text_field :image %><br />
-      <%= f.label 'Comment'%>
-      <%= f.text_area :comment %><br />
-      <%= f.submit "Edit Pin"%>
+      <%= f.text_field :image, label: 'Image Url' %><br />
+      <%= f.text_area :comment, placeholder: 'Leave a comment' %><br />
+      <%= f.submit "Edit Pin", class: 'btn btn-warning'%>
     <% end %>
     
   </div>
