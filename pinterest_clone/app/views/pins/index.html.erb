@@ -1,7 +1,7 @@
 <h1>Pins</h1>
 <% @pins.each do |pin|%>
   <div>
-    <% if pin.image%>
+    <% if pin.image.length > 0 %>
       <a href="<%=pin.url%>">
         <img src="<%= pin.image%>" >
       </a>
