@@ -9,11 +9,11 @@ class PinsController < ApplicationController
   end
 
   def create
-    @pin = Pin.create(pin_params)
-    if @pin.errors.any? 
-      redirect_to new_pin_path, alert: @pin.errors.full_messages
-    else
+    @pin = Pin.new(pin_params)
+    if @pin.save
       redirect_to pins_path, notice: "Pin successfully created!"
+    else
+      redirect_to new_pin_path, alert: @pin.errors.full_messages
     end
   end
 
@@ -23,11 +23,10 @@ class PinsController < ApplicationController
 
   def update
     @pin = Pin.find(params[:id])
-    @pin.update(pin_params)
-    if @pin.errors.any? 
-      redirect_to edit_pin_path, alert: @pin.errors.full_messages
-    else
+    if @pin.update(pin_params)
       redirect_to pins_path, notice: "Pin successfully updated!"
+    else
+      redirect_to edit_pin_path, alert: @pin.errors.full_messages
     end
   end
 
