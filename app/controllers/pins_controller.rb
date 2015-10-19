@@ -14,7 +14,6 @@ class PinsController < ApplicationController
       redirect_to pins_path, notice: "Pin successfully created!"
     else
       render :new
-      # redirect_to new_pin_path, alert: @pin.errors.full_messages
     end
   end
 
@@ -27,7 +26,7 @@ class PinsController < ApplicationController
     if @pin.update(pin_params)
       redirect_to pins_path, notice: "Pin successfully updated!"
     else
-      redirect_to edit_pin_path, alert: @pin.errors.full_messages
+      render :edit
     end
   end
 
