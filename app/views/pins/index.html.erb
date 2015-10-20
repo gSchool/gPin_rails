@@ -1,0 +1,16 @@
+<h2>Pins of Doug the Dog</h2>
+
+<h4><a href="/pins/new">Add a new pin</a></h4>
+
+<%= @pins.each do |pin| %>
+  
+  <p><%= pin.comment %>:<br />
+  </p>
+
+  <p><img src="<%= pin.image %>" width="300"><br />
+  </p>
+
+  <p><%= link_to "Delete this pin", pin_path(pin), method: :delete, data: {confirm: "Are you sure?"}%>
+  </p>
+
+  <% end %>
