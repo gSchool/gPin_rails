@@ -1,20 +1,18 @@
 <%= render "nav_bar" %>
 <h1>INDEX PAGE!</h1>
 
-
 <div class="container">
 
 <div class="col-xs-3"></div>
   
-
 <div class="col-xs-6">
   <% @pins.each do |pin| %>
-    <div class="item">
-      <a href="<%=pin.url %>"><%=pin.url %></a>
-      
-      <img src="<%=pin.image%>" width="50">
-    <% end %>
+    <div class="item text-center">
+      <a href="<%=pin.url %>"><img src="<%=pin.image%>" width="150"></a> 
+      <br>
+      <span><%=pin.comment%></span>
    </div>
+<% end %>
 
 </div>  
 
