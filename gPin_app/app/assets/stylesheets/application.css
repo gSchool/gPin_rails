@@ -28,3 +28,15 @@
  span{
   font-size: 8px;
  }
+
+ .button
+ {
+  height: 1px;
+  width: 1px;
+  margin-bottom: 2px;
+ }
+
+ #destroy{
+  float: right;
+  margin-top: 2px;
+ }
