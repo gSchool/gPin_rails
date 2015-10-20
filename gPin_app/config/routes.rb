@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get 'pins/new', to: 'pins#new'
   #show
   # rails s throwing errors when I include as:
-  # get 'pins/new/:id', to: 'pins#show', as: :pins #why?
+  get('pins/:id', {to: 'pins#show', as: :pin}) #why?
 
 end
