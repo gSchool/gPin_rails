@@ -30,10 +30,12 @@ class PinsController < ApplicationController
     # What is going on HERE??
     @pin.update(pin_params) 
     redirect_to "/pins"
-
   end
 
   def destroy
+    @pin = Pin.find(params[:id])
+    @pin.destroy
+    redirect_to '/'
   end
 
 
