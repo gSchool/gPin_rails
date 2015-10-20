@@ -1,6 +1,6 @@
 class PinsController < ApplicationController
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order(:id)
   end
 
   def new

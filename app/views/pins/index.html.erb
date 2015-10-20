@@ -10,7 +10,9 @@
   <p><img src="<%= pin.image %>" width="300"><br />
   </p>
 
-  <p><%= link_to "Delete this pin", pin_path(pin), method: :delete, data: {confirm: "Are you sure?"}%>
+  <p><%= link_to "Edit this pin", edit_pin_path(pin) %></p>
+
+  <p><%= link_to "Delete this pin", pin, method: :delete, data: {confirm: "Are you sure?"}%>
   </p>
 
   <% end %>
