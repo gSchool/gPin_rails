@@ -1,0 +1,27 @@
+<%= render "nav_bar" %>
+
+<div class="container">
+
+<div class="col-xs-3"></div>
+  
+<div class="col-xs-6">
+  <% @pins.each do |pin| %>
+    <div class="item text-center">
+      <a href="<%=pin.url %>"><img src="<%=pin.image%>" width="150"></a> 
+      <br>
+      <span><%=pin.comment%></span>
+  
+  <div class="button">
+      <a class="btn-sm btn-info" href="/pins/<%=pin.id%>">More</a>
+  </div>
+
+   </div>
+<% end %>
+
+</div>  
+
+<div class="col-xs-3"></div>
+</div>
+
+
+

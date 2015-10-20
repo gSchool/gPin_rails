@@ -1,0 +1,27 @@
+<%= render "nav_bar" %>
+
+<br>
+<br>
+
+<div class="container">
+
+<div class="col-xs-3"></div>
+  
+<div class="col-xs-6 text-center">
+    <div class="item text-center">
+      <a href="<%=@pin.url %>"><img src="<%=@pin.image%>" width="150"></a> 
+      <br>
+      <span><%=@pin.comment%></span>
+   </div>
+
+  <div class="block text-center">
+   <%= link_to 'Destroy', @pin,  method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    
+   <a class="btn-sm btn-info"href="/pins/<%=@pin.id%>/edit">Update</a>
+  </div>
+
+
+</div>  
+
+<div class="col-xs-3"></div>
+</div>

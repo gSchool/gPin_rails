@@ -1,0 +1,14 @@
+<%= render "nav_bar" %>
+
+<h1>Inside the NEW Page</h1>
+
+
+<%= form_for @pin do |f| %>
+  <%= f.label "Url" %>
+  <%= f.text_field :url %> <br />
+  <%= f.label "Comment" %>
+  <%= f.text_field :comment %> <br /> 
+  <%= f.label "Image" %>
+  <%= f.text_field :image %> <br />
+  <%= f.submit "Create Pin" %>
+<% end %>
