@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h1>New Pin</h1>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <%= bootstrap_form_for @pin do |f|%>
+      <%= f.text_field :url, label: 'Website Url' %><br />
+      <%= f.text_field :name %><br />
+      <%= f.text_field :image, label: 'Image Url' %><br />
+      <%= f.text_area :comment, placeholder: 'Leave a comment' %><br />
+      <%= f.submit "Add Pin", class: 'btn btn-success'%>
+    <% end %>
+    
+  </div>
+</div>
