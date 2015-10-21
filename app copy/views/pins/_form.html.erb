@@ -1,0 +1,9 @@
+<%= form_for @pin do |f| %>
+	<%= f.label "Link" %>
+	<%= f.text_field :url, :class => "form-control", autofocus: true %><br />
+	<%= f.label "Image Url" %>
+	<%= f.text_field :photo, :class => "form-control" %><br />
+	<%= f.label "Comment" %>
+	<%= f.text_field :comment, :class => "form-control" %><br />
+	<%= f.submit, :class => "btn btn-danger" %>
+<% end %>

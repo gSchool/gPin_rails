@@ -1,0 +1,18 @@
+<%= form_for Pin.new do |f| %>
+      <div class="row">
+            <div class="col-xs-6">
+                  <%= f.hidden_field :url, value: pin.url %><br />
+                  <img src="<%= pin.photo %>" class="img-rounded">
+                  <%= f.hidden_field :photo, value: pin.photo %><br />
+                  <%= f.label "Comment" %>
+                  <%= f.text_field :comment, value: pin.comment %><br />
+            </div>
+            <div class="col-xs-6">
+                  <%= f.label "Choose Board" %>
+                  <%= select("pin", "board_id", Board.all.collect {|p| [ p.name, p.id ] }) %>
+            </div>
+      </div>
+
+      <div class="row">
+            <%= f.submit "Add Pin", :class => "btn btn-danger" %>
+<% end %>
