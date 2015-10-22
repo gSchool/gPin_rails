@@ -1,18 +1,17 @@
-<h2>Pins of Doug the Dog</h2>
+<h2>gPin: Doug the Voodoo Doll</h2>
 
-<h4><a href="/pins/new">Add a new pin</a></h4>
+<h3><a href="/pins/new">Add a new pin</a></h3>
 
-<%= @pins.each do |pin| %>
+<% @pins.each do |pin| %>
   
-  <p><%= pin.comment %>:<br />
-  </p>
-
+  <div><h4><%= pin.comment %>:</h4><br />
   <p><img src="<%= pin.image %>" width="300"><br />
-  </p>
 
   <p><%= link_to "Edit this pin", edit_pin_path(pin) %></p>
 
   <p><%= link_to "Delete this pin", pin, method: :delete, data: {confirm: "Are you sure?"}%>
   </p>
+  <p></p>
+  <p></p>
 
   <% end %>
