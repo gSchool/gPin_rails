@@ -1,0 +1,26 @@
+<h2>app/views/pins/new.html.erb</h2>
+
+   <h4>New Pin</h4>
+
+    <%= form_for @pin do |f| %>
+      <%= f.label "Image URL" %>
+      <%= f.text_field :image %><br />
+      <%= f.label "Short Description" %>
+      <%= f.text_field :comment %><br />
+      <%= f.label "Page URL" %>
+      <%= f.text_field :url %><br />
+      <%= f.submit "SUBMIT" %>
+    <% end %>
+
+<!--     <form action="/pins" method="POST">
+      <label for="pin_image">Image URL</label>
+      <input type="text" name="pin[image]" id="pin_name"><br/>
+      
+      <label for="pin_comment">Short Description</label>
+      <input type="text" name="pin[comment]" id="pin_comment"><br/>
+      
+      <label for="pin_url">Page URL</label>
+      <input type="text" name="pin[url]" id="pin_url"><br/>
+
+      <input type="submit" value="New Pin">
+    </form> -->
